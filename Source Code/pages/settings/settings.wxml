@@ -1,0 +1,45 @@
+<!--pages/settings/settings.wxml-->
+<view class="wrapper">
+  <image class="UserIcon" src="{{UserInfo.avatarUrl}}"></image>
+  <view class="UserInfo">
+    <image class="DefaultIcon" src="../../resources/Guest.png"></image>
+    <view class="UserName">{{UserInfo.nickName}}</view>
+  </view>
+  <view class="CourseList">
+    <view class="CourseList-title">课程列表</view>
+    <view wx:for="{{CourseList}}" wx:key="Order" wx:for-item="Course" class="CourseList-content">
+      <view class="Course-content-left">
+        <view class="Course-content-name">{{Course.Number}}</view>
+        <view class="Course-content-instructor">{{Course.Instructor}}</view>
+        <view class="Course-content-location">{{Course.Location}}</view>
+      </view>
+      <view class="Course-content-mid">
+        <view class="Course-content-time">
+          <view class="Course-content-time-single" wx:key="String" wx:for="{{Course.Time}}" wx:for-item="Time">{{Time.String}}</view>
+        </view>
+        <view class="Course-content-other">{{Course.Other[0]}} {{Course.Other[1]}} {{Course.Other[2].String}}</view>
+      </view>
+      <view class="Course-content-right">
+        <view class="Course-content-button" hover-class="Button-hover" hover-stay-time="100" bindtap="EditFunction" data-id="{{Course.Order}}"><image class="Course-button-icon" src="../../resources/Edit.png">Edit</image></view>
+        <view class="Course-content-button" hover-class="Button-hover" hover-stay-time="100" bindtap="DeleteFunction" data-id="{{Course.Order}}"><image class="Course-button-icon" src="../../resources/Delete.png">Delete</image></view>
+      </view>
+    </view>
+    <view class="CourseList-addcourse" hover-class="Button-hover" hover-stay-time="100" bindtap="ToAddCourse">
+      <image class="CourseList-addcourse-icon" src="../../resources/Add.png">Add</image>
+    </view>
+  </view>
+  <view class="ClearData" hover-class="Button-hover" hover-stay-time="100" bindtap="ClearFunction">
+    <view class="ClearData-text">清空列表</view>
+    <view class="ClearData-warn"><icon type="warn" /></view>
+  </view>
+  <view class="About" hover-class="Button-hover" hover-stay-time="100" bindtap="ToAboutPage">
+    <view class="About-text">关于</view>
+  </view>
+  <view class="Contact">
+    <view class="Contact-text">联系开发者</view>
+    <view style="margin-left: 310rpx; margin-right: 20rpx;" class="Contact-text">请点击</view>
+    <image style="height: 30rpx; width: 20rpx;" src="../../resources/toContact.png">toContact</image>
+    <contact-button style="margin-left: 20rpx;" size="45"></contact-button>
+  </view>
+  <view class="space-bottom"></view>
+</view>

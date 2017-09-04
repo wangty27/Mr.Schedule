@@ -1,0 +1,32 @@
+/* pages/about/about.wxss */
+page{
+  background: #F3F4F6;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.logo-view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img{
+  margin: 50rpx;
+  height: 300rpx;
+  width: 300rpx;
+}
+
+.greeting{
+  width: 90%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25rpx;
+  color: #000000;
+}

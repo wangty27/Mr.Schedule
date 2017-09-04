@@ -1,0 +1,7 @@
+<!--pages/about/about.wxml-->
+<view class="wrapper">
+  <view class="logo-view">
+    <image class="logo-img" src="../../resources/logo.png">Logo</image>
+  </view>
+  <view class="greeting">欢迎使用Mr.课表，在课表页面或者设置页面点击加号即可添加课程，在设置页面可修改或删除已添加课程。此版本为Mr.课表第一个版本，如有Bug存在请通过联系开发者按钮联系开发者，谢谢使用。</view>
+</view>

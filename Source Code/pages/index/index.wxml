@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="wrapper">
+  <image class="Add-Notice" src="../../resources/AddNotice.png" hidden="{{AddNoticeHidden}}">Add</image>
+  <view class="header">
+    <view class="header-Add" bindtap="ToAddClick" hover-class="header-To-hover" hover-stay-time="100"><image class="header-Add-img" src="../../resources/toAdd.png">Add</image></view>
+    <view data-id="L" class="header-To" bindtap="ToBtnClick" hover-class="header-To-hover" hover-stay-time="100"><image class="header-To-img" src="../../resources/toLeft.png">Left</image></view>
+    <view class="header-Date">
+      <view class="header-Date-day">{{WeekDay[CurrentDayIndex]}}</view>
+      <view class="header-Date-date">{{CurrentDate}}</view>
+    </view>
+    <view data-id="R" class="header-To" bindtap="ToBtnClick" hover-class="header-To-hover" hover-stay-time="100"><image class="header-To-img" src="../../resources/toRight.png">Right</image></view>
+  </view>
+  <scroll-view class="body" scroll-y="true">
+    <view data-id="{{index}}" class="course-content" wx:for="{{courseList}}" wx:key="Order" wx:for-item="course" style="background: {{backgroundColor[course.Course.Order - 1]}}; height: {{heightList[index]}}; margin-top: {{marginList[index]}}" bindtap="ToEditFunction">
+      <view class="course-content-left">
+        <view class="course-content-number">{{course.Course.Number}}</view>
+        <view class="course-content-type">{{course.Course.Type}}</view>
+      </view>
+      <view class="course-content-right">
+        <view class="course-content-instructor">{{course.Course.Instructor}}</view>
+        <view class="course-content-location">{{course.Course.Location}}</view>
+        <view class="course-content-time">{{course.Time}}</view>
+      </view>
+    </view>
+    <view class="time-part">
+      <view class="time-interval" wx:for="{{timeInterval}}" wx:key="Number" wx:for-item="time">
+        {{time.String}}
+      </view>
+    </view>
+    <view class="course-part">
+      <view class="time-interval" wx:for="{{timeInterval}}" wx:key="Number" wx:for-item="time">
+        <view class="course-interval"></view>
+        <view style="height: 59rpx;"></view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,227 @@
+/* pages/settings/settings.wxss */
+
+page{
+  height: 100%;
+  background: #F3F4F6;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.UserInfo{
+  height: 180rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  border-top: 2rpx solid #ECECEC;
+  border-bottom: 2rpx solid #ECECEC;
+}
+
+.UserIcon{
+  position: absolute;
+  height: 125rpx;
+  width: 125rpx;
+  border-radius: 50%;
+  margin-top: 46rpx;
+  margin-left: 50rpx;
+}
+
+.DefaultIcon{
+  height: 125rpx;
+  width: 125rpx;
+  border-radius: 50%;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.UserName{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 63%;
+  font-size: 30rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.CourseList{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border-top: 2rpx solid #ECECEC;
+  border-bottom: 2rpx solid #ECECEC;
+}
+
+.CourseList-title{
+  height: 70rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 35rpx;
+  align-items: center;
+  border-bottom: 2rpx solid #ECECEC;
+}
+
+.CourseList-content{
+  height: 170rpx;
+  border-bottom: 2rpx solid #ECECEC;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Course-content-left{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 25%;
+  height: 100%;
+}
+
+.Course-content-mid{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 55%;
+  height: 100%;
+}
+
+.Course-content-right{
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  height: 100%;
+}
+
+.Course-content-name{
+  display: flex;
+  align-items: flex-end;
+  padding-left: 10rpx;
+  font-size: 40rpx;
+  height: 40%;
+}
+
+.Course-content-instructor{
+  display: flex;
+  align-items: center;
+  padding-left: 10rpx;
+  font-size: 20rpx;
+  height: 30%;
+}
+
+.Course-content-location{
+  display: flex;
+  align-items: center;
+  padding-left: 10rpx;
+  font-size: 20rpx;
+  height: 30%;
+}
+
+.Course-content-time{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  height: 85%;
+}
+
+.Course-content-other{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  height: 10%;
+}
+
+.Course-content-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+
+.Course-button-icon{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.CourseList-addcourse{
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CourseList-addcourse-icon{
+  height: 60rpx;
+  width: 60rpx;
+}
+
+.ClearData{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 85rpx;
+  margin-top: 50rpx;
+  background: #FFFFFF;
+  border-top: 2rpx solid #ECECEC;
+  border-bottom: 2rpx solid #ECECEC;
+}
+
+.ClearData-text{
+  display: flex;
+  align-items: center;
+  font-size: 33rpx;
+  color: #FF0000;
+  height: 100%;
+  width: 75%;
+}
+
+.ClearData-warn{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.About{
+  display: flex;
+  align-items: center;
+  margin-top: 50rpx;
+  height: 85rpx;
+  background: #FFFFFF;
+  border-top: 2rpx solid #ECECEC;
+  border-bottom: 2rpx solid #ECECEC;
+}
+
+.About-text{
+  margin-left: 38rpx;
+  font-size: 33rpx;
+}
+
+.Contact{
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+  height: 85rpx;
+  background: #FFFFFF;
+  border-top: 2rpx solid #ECECEC;
+  border-bottom: 2rpx solid #ECECEC;
+}
+
+.Contact-text{
+  margin-left: 38rpx;
+  font-size: 33rpx;
+}
+
+.Button-hover{
+  background: #ECECEC;
+}
+
+.space-bottom{
+  height: 30rpx;
+}

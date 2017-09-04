@@ -1,0 +1,181 @@
+/**index.wxss**/
+
+page{
+  height: 100%;
+  background: #F3F4F6;
+}
+
+.header{
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  background: #73689B;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 2rpx solid #ECECEC;
+}
+
+.header-Date{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  height: 100%;
+  width: 50%;
+}
+
+.header-Date-day{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  height: 55%;
+  width: 100%;
+}
+
+.header-Date-date{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  height: 45%;
+  width: 100%;
+}
+
+.header-Add{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 14%;
+}
+
+.header-Add-img{
+  height: 55rpx;
+  width: 55rpx;
+}
+
+.header-To{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 14%;
+}
+
+.header-To-img{
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.header-To-hover{
+  background: #685E8B;
+}
+
+.body{
+  position: fixed;
+  margin-top: 102rpx;
+  width: 100%;
+  height: 1025rpx;
+}
+
+.time-part{
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130rpx;
+  background: #73689B;
+  border-right: 2rpx solid #DDDDDD;
+}
+
+.time-interval{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 118rpx;
+  width: 100%;
+  border-bottom: 2rpx solid #DDDDDD;
+  color: #FFFFFF;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.course-interval{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #DDDDDD;
+  color: #FFFFFF;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.course-part{
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 610rpx;
+}
+
+.course-content{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 570rpx;
+  margin-left: 158rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid #FFFFFF;
+}
+
+.course-content-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 100%;
+  font-size: 30rpx;
+  font-weight: bold;
+  border-right: 3rpx solid #FFFFFF;
+}
+
+.course-content-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  height: 100%;
+  font-size: 20rpx;
+  font-weight: bold;
+}
+
+.course-content-type{
+  font-size: 25rpx;
+  font-weight: bold;
+}
+
+.Add-Notice{
+  margin-top: 65rpx;
+  margin-left: 12rpx;
+  position: fixed;
+  z-index: 10;
+  height: 140rpx;
+  width: 210rpx;
+}
+
+.debug{
+  border: 3rpx solid white;
+}

@@ -1,0 +1,89 @@
+<!--pages/editCourse/editCourse.wxml-->
+<view class="wrapper">
+  <view id="Name" class="CourseInfo-name">
+    <view class="CourseInfo-Text">名称</view>
+    <input id="NameInput" class="CourseInfo-Input" type="text" placeholder="请输入名称" bindinput="InfoInput" value="{{NameVal}}"/>
+  </view>
+  <view id="Number" class="CourseInfo-number">
+    <view class="CourseInfo-Text">课号</view>
+    <input id="NumberInput" class="CourseInfo-Input" type="text" placeholder="请输入课号（必填）" placeholder-style="{{NumberPH}}" maxlength="10" bindinput="InfoInput" value="{{NumberVal}}"/>
+  </view>
+  <view class="CourseInfo">
+    <view id="Instructor" class="CourseInfo-parts">
+      <view class="CourseInfo-Text">教师</view>
+      <input id="InstructorInput" class="CourseInfo-Input" type="text" placeholder="请输入教师名称" placeholder-style="{{InstructorPH}}" bindinput="InfoInput" value="{{InstructorVal}}"/>
+    </view>
+    <view id="Time" class="CourseInfo-time">
+      <view class="Time-Title">
+        <view class="Time-Title-text">时间</view>
+        <view class="Time-Title-button" hover-class="Time-Title-button-hover" hidden="{{delHiddenCtl}}" hover-stay-time="100" bindtap="DelTime"><image class="Time-Title-img" src="../../resources/Del.png"></image></view>
+        <view class="Time-Title-button" hover-class="Time-Title-button-hover" hidden="{{addHiddenCtl}}" hover-stay-time="100" bindtap="AddTime"><image class="Time-Title-img" src="../../resources/Add.png"></image></view>
+      </view>
+      <view class="Time-Content" wx:key="*this" wx:for="{{timeList}}" wx:for-item="Time">
+        <view class="Time-Content-pickerGroup">
+          <view class="Time-Content-picker">
+            <picker id="{{index}}" mode="time" value="{{timeStart[index]}}" start="7:00" end="22:00" bindchange="StartTimeChange">
+              <view class="picker">开始：{{timeStart[index]}}</view>
+            </picker>
+          </view>
+          <view class="Time-Content-picker">
+            <picker id="{{index}}" mode="time" value="{{timeEnd[index]}}" start="7:00" end="22:00" bindchange="EndTimeChange">
+              <view class="picker">结束：{{timeEnd[index]}}</view>
+            </picker>
+          </view>
+        </view>
+        <view class="Time-Content-dayGroup">
+          <view id="{{index}}" class="Time-Content-day {{DayMSelected[index] ? 'day-selected':''}}" bindtap="DaySelect" data-subid = "Day-M">周一</view>
+          <view id="{{index}}" class="Time-Content-day {{DayTSelected[index] ? 'day-selected':''}}" bindtap="DaySelect" data-subid = "Day-T">周二</view>
+          <view id="{{index}}" class="Time-Content-day {{DayWSelected[index] ? 'day-selected':''}}" bindtap="DaySelect" data-subid = "Day-W">周三</view>
+          <view id="{{index}}" class="Time-Content-day {{DayThSelected[index] ? 'day-selected':''}}" bindtap="DaySelect" data-subid = "Day-Th">周四</view>
+          <view id="{{index}}" class="Time-Content-day {{DayFSelected[index] ? 'day-selected':''}}" bindtap="DaySelect" data-subid = "Day-F">周五</view>
+        </view>
+      </view>
+    </view>
+    <view id="Location" class="CourseInfo-location CourseInfo-parts">
+      <view class="CourseInfo-Text">地点</view>
+      <input id="LocationInput" class="CourseInfo-Input" type="text" placeholder="请输入地点" placeholder-style="{{LocationPH}}" bindinput="InfoInput" value="{{LocationVal}}"/>
+    </view>
+    <view id="Other" class="CourseInfo-other">
+      <view class="Other-Title">
+        <view class="Other-Title-Text">其他（LAB, TUT...）</view>
+        <view class="Other-Title-Button" hover-class="Other-Title-Button-hover" hover-stay-time="100" bindtap="AddDelOther"><image class="Time-Title-img" src="{{Adding ? '../../resources/Del.png':'../../resources/Add.png'}}"></image></view>
+      </view>
+      <view class="Other-Content" hidden="{{!Adding}}">
+        <view class="Other-Content-pickerGroup">
+          <view class="Other-Content-picker">
+            <picker id="OtherTimeStart" mode="time" value="{{OtherTimeStart}}" start="7:00" end="22:00" bindchange="OtherTimeStartChange">
+              <view class="picker">开始：{{OtherTimeStart}}</view>
+            </picker>
+          </view>
+          <view class="Other-Content-picker">
+            <picker id="OtherTimeEnd" mode="time" value="{{OtherTimeEnd}}" start="7:00" end="22:00" bindchange="OtherTimeEndChange">
+              <view class="picker">结束：{{OtherTimeEnd}}</view>
+            </picker>
+          </view>
+        </view>
+        <view class="Other-Content-dayGroup">
+          <view id="OtherDay-M" class="Other-Content-day {{OtherDayMSelected ? 'day-selected':''}}" bindtap="OtherDaySelect">周一</view>
+          <view id="OtherDay-T" class="Other-Content-day {{OtherDayTSelected ? 'day-selected':''}}" bindtap="OtherDaySelect">周二</view>
+          <view id="OtherDay-W" class="Other-Content-day {{OtherDayWSelected ? 'day-selected':''}}" bindtap="OtherDaySelect">周三</view>
+          <view id="OtherDay-Th" class="Other-Content-day {{OtherDayThSelected ? 'day-selected':''}}" bindtap="OtherDaySelect">周四</view>
+          <view id="OtherDay-F" class="Other-Content-day {{OtherDayFSelected ? 'day-selected':''}}" bindtap="OtherDaySelect">周五</view>
+        </view>
+        <view class="Other-Content-Title">
+          <view class="CourseInfo-Text">类型</view>
+          <input id="OtherTypeInput" class="CourseInfo-Input" type="text" value="{{OtherTypeInput}}" placeholder="请输入类型" placeholder-style="{{OtherTypePH}}" maxlength="5" bindinput="InfoInput"/>
+        </view>
+        <view class="Other-Content-Title">
+          <view class="CourseInfo-Text">地点</view>
+          <input id="OtherLocationInput" class="CourseInfo-Input" type="text" value="{{OtherLocationInput}}" placeholder="请输入地点" placeholder-style="{{OtherLocationPH}}" bindinput="InfoInput"/>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="ButtonPart">
+    <view class="CancelButton" hover-class="CancelButton-hover" hover-stay-time="100" bindtap="CancelBtnClick">取消</view>
+    <view class="SubmitButton" hover-class="SubmitButton-hover" hover-stay-time="100" bindtap="SubmitBtnClick">确定</view>
+  </view>
+  <view class="EmptyPart"> </view>
+</view>

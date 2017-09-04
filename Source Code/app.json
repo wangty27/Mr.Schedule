@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/settings/settings",
+    "pages/about/about",
+    "pages/addCourse/addCourse",
+    "pages/editCourse/editCourse"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#73689B",
+    "navigationBarTitleText": "Mr.课表",
+    "navigationBarTextStyle":"#FFFFFF"
+  },
+  "tabBar":{
+    "color": "#000000",
+    "selectedColor": "#73689B",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "课表",
+        "iconPath": "resources/Table.png",
+        "selectedIconPath": "resources/TableS.png"
+      },
+      {
+        "pagePath": "pages/settings/settings",
+        "text": "设置",
+        "iconPath": "resources/Setting.png",
+        "selectedIconPath": "resources/SettingS.png"
+      }
+    ]
+  }
+
+
+}

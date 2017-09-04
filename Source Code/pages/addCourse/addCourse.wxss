@@ -1,0 +1,287 @@
+/* pages/addCourse/addCourse.wxss */
+
+page{
+  height: 100%;
+  background: #F3F4F6;
+}
+
+.CourseInfo{
+  height: 100%;
+  width: 100%;
+  margin-top: 50rpx;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  border-top: 2rpx solid #ECECEC;
+  font-size: 30rpx;
+}
+
+.CourseInfo-parts{
+  height: 90rpx;
+  width: 100%;
+  border-bottom: 2rpx solid #ECECEC;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.CourseInfo-name{
+  height: 90rpx;
+  width: 100%;
+  margin-top: 30rpx;
+  background: #FFFFFF;
+  border-top: 2rpx solid #ECECEC;
+  border-bottom: 2rpx solid #ECECEC;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.CourseInfo-number{
+  height: 90rpx;
+  width: 100%;
+  background: #FFFFFF;
+  border-bottom: 2rpx solid #ECECEC;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.CourseInfo-time{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.01rpx solid #FFFFFF;
+}
+
+
+.Time-Title{
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2rpx solid #ECECEC;
+}
+
+.Time-Title-text{
+  width: 90%;
+  padding-left: 30rpx;
+}
+
+.Time-Title-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 100%;
+}
+
+.Time-Title-button-hover{
+  background: #ECECEC;
+}
+
+.Time-Title-img{
+  height: 35rpx;
+  width: 35rpx;
+}
+
+.Time-Content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 2rpx solid #ECECEC;
+}
+
+.Time-Content-pickerGroup{
+  display: flex;
+  height: 60rpx;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Time-Content-picker{
+  padding-left: 20rpx;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Time-Content-dayGroup{
+  display: flex;
+  height: 80rpx;
+  widows: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Time-Content-day{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 16%;
+  border: 3rpx solid #ECECEC;
+  border-radius: 10rpx;
+}
+
+.day-selected{
+  background: #ECECEC;
+}
+
+.CourseInfo-Text{
+  width: 25%;
+}
+
+.CourseInfo-Input{
+  width: 450rpx;
+  height: 100%;
+  text-align: right;
+}
+
+.CourseInfo-other{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Other-Title{
+  height: 90rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 2rpx solid #ECECEC;
+}
+
+.Other-Title-Text{
+  width: 90%;
+  padding-left: 30rpx;
+}
+
+.Other-Title-Button{
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Other-Title-Button-hover{
+  background: #ECECEC;
+}
+
+.Other-Content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Other-Content-Title{
+  height: 70rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Other-Content-pickerGroup{
+  display: flex;
+  height: 60rpx;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Other-Content-picker{
+  padding-left: 20rpx;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Other-Content-dayGroup{
+  display: flex;
+  height: 80rpx;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Other-Content-day{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 16%;
+  border: 3rpx solid #ECECEC;
+  border-radius: 10rpx;
+}
+
+.day-selected{
+  background: #ECECEC;
+}
+
+.ButtonPart{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100rpx;
+  margin-bottom: 50rpx;
+}
+
+.CancelButton{
+  width: 45%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #9F9F9F;
+  color: #FFFFFF;
+  font-size: 40rpx;
+  border-bottom: 2rpx solid #ECECEC;
+  border-right: 2rpx solid #ECECEC;
+  border-radius: 10rpx;
+}
+
+.CancelButton-hover{
+  background: #6D6D6D; 
+}
+
+.SubmitButton{
+  width: 45%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #33B332;
+  color: #FFFFFF;
+  font-size: 40rpx;
+  border-bottom: 2rpx solid #ECECEC;
+  border-right: 2rpx solid #ECECEC;
+  border-radius: 10rpx;
+}
+
+.SubmitButton-hover{
+  background: #278B26;
+}
+
+.PHRed{
+  color: #FF0000;
+}
+
+.PHNormal{
+  color: #6D6D6D;
+}
+
+.EmptyPart{
+  height: 20rpx;
+  width: 100%;
+}
